@@ -43,9 +43,16 @@ rem ----/* Error Menue Error message *\----
 
 rem ----/* Start Functions Section *\----
 
+:gitHub
+start "" "https://github.com/Mohammad-Khiabani/"
+echo Press any key to return to the menue...
+pause >nul
+timeout /t 1 >nul
+goto menue
+
 :closeApp
 echo you are at close app handler.
-set /p exitQuestion=Do you want to exit? Y = yes and N = No: 
+set /p exitQuestion=Do you want to exit? (Y = Yes, N = No): 
 
 if /i "%exitQuestion%"=="N" goto menue
 

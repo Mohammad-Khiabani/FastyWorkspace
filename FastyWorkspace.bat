@@ -39,4 +39,20 @@ pause >nul
 
 goto menue
 
-rem ----/* Start Menue Error message *\----
+rem ----/* Error Menue Error message *\----
+
+rem ----/* Start Functions Section *\----
+
+:closeApp
+echo you are at close app handler.
+set /p exitQuestion=Do you want to exit? Y = yes and N = No: 
+
+if /i "%exitQuestion%"=="N" goto menue
+
+if /i "%exitQuestion%"=="Y" (
+  echo Goodbye my bro :^)
+  timeout /t 3
+  exit
+)
+
+rem ----/* End Functions Section *\----

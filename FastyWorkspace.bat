@@ -16,3 +16,18 @@ echo [5] Exit
 echo ======================
 
 rem ----/* End Menue options *\----
+
+echo.
+set /p option=Please Enter Number Of List: 
+echo.
+
+rem ----/* Start Menue Conditions *\----
+
+if "%option%"=="1" goto newWorkspace
+if "%option%"=="2" goto showWorkspaces
+if "%option%"=="3" goto removeWorkspace
+if "%option%"=="4" goto gitHub
+if "%option%"=="5" goto closeApp
+
+rem ----/* Start Menue Conditions *\----
+

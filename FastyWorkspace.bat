@@ -31,3 +31,12 @@ if "%option%"=="5" goto closeApp
 
 rem ----/* Start Menue Conditions *\----
 
+rem ----/* Start Menue Error message *\----
+
+echo Your entered number is not defined! Please enter a number from the menu.
+echo press any key to get to the menue... 
+pause >nul
+
+goto menue
+
+rem ----/* Start Menue Error message *\----

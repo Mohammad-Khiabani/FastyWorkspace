@@ -1,6 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 color 0a
+title Fasty work space (v1.0.0)
 
 rem echo Welcome message
 rem echo.

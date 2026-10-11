@@ -1,4 +1,6 @@
 @echo off
+setlocal enabledelayedexpansion
+color 0a
 
 rem echo Welcome message
 rem echo.

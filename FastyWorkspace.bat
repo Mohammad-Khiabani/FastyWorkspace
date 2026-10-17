@@ -1,5 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
+
+rem ----/* Styles *\----
 color 0a
 title Fasty work space (v1.0.0)
 
@@ -50,6 +52,7 @@ rem ----/* Error Menue Error message *\----
 
 rem ----/* Start Functions Section *\----
 
+
 :gitHub
 start "" "https://github.com/Mohammad-Khiabani/"
 echo Press any key to return to the menue...
@@ -58,15 +61,17 @@ timeout /t 1 >nul
 goto menue
 
 :closeApp
-echo you are at close app handler.
 set /p exitQuestion=Do you want to exit? (Y = Yes, N = No): 
 
 if /i "%exitQuestion%"=="N" goto menue
 
 if /i "%exitQuestion%"=="Y" (
-  echo Goodbye my bro :^)
-  timeout /t 3
-  exit
+  goto exitHandler
 )
+
+:exitHandler
+echo Goodbye my bro :^)
+timeout /t 3
+exit
 
 rem ----/* End Functions Section *\----

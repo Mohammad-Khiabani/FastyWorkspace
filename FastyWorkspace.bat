@@ -40,7 +40,7 @@ if "%option%"=="5" goto closeApp
 
 :: ----/* Start Menue Conditions *\----
 
-:: ----/* Start Error message Menue *\----
+:: ----/* Start Error message *\----
 
 echo Your entered number is not defined! Please enter a number from the menu.
 echo press any key to get to the menue... 
@@ -81,6 +81,19 @@ if /i "%exitQuestion%"=="N" goto menue
 if /i "%exitQuestion%"=="Y" (
   goto exitHandler
 )
+
+call :alarmBox "Attention" "Please enter a valid character!"
+goto closeApp
+
+:alarmBox
+echo.
+echo +------------^| %~1 ^|-------------+
+echo ^|                                      ^|
+echo ^| -[ %~2 ]- ^|
+echo ^|                                      ^|
+echo +--------------------------------------+
+echo.
+exit /b
 
 :: Exit app Handler
 :exitHandler

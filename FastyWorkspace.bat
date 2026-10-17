@@ -8,7 +8,7 @@ title Fasty work space (v1.0.0)
 rem echo Welcome message
 rem echo.
 
-rem ----/* Start Menue options *\----
+:: ----/* Start Menue options *\----
 :menue
 cls
 cls
@@ -24,13 +24,13 @@ echo ^|                         [5] Exit.                                       
 echo ^|                                                                         ^|
 echo +=========================================================================+
 
-rem ----/* End Menue options *\----
+:: ----/* End Menue options *\----
 
 echo.
 set /p option=Please Enter Number Of List: 
 echo.
 
-rem ----/* Start Menue Conditions *\----
+:: ----/* Start Menue Conditions *\----
 
 if "%option%"=="1" goto newWorkspace
 if "%option%"=="2" goto showWorkspaces
@@ -38,9 +38,9 @@ if "%option%"=="3" goto removeWorkspace
 if "%option%"=="4" goto gitHub
 if "%option%"=="5" goto closeApp
 
-rem ----/* Start Menue Conditions *\----
+:: ----/* Start Menue Conditions *\----
 
-rem ----/* Start Menue Error message *\----
+:: ----/* Start Error message Menue *\----
 
 echo Your entered number is not defined! Please enter a number from the menu.
 echo press any key to get to the menue... 
@@ -48,11 +48,23 @@ pause >nul
 
 goto menue
 
-rem ----/* Error Menue Error message *\----
+:: ----/* End Error message Menue *\----
 
-rem ----/* Start Functions Section *\----
+:: ----/*Start Set variables block*\----
+set /a count=0
+set "newWOrkspaceName="
+:: Pattern => name:path; 
+set "paths="
+set "existingPath="
+
+set "filePath=" 
+
+:: ----/* End of Set variables block *\----
+
+:: ----/* Start Functions Section *\----
 
 
+:: GitHub Handler
 :gitHub
 start "" "https://github.com/Mohammad-Khiabani/"
 echo Press any key to return to the menue...
@@ -60,6 +72,7 @@ pause >nul
 timeout /t 1 >nul
 goto menue
 
+:: Close app Handler
 :closeApp
 set /p exitQuestion=Do you want to exit? (Y = Yes, N = No): 
 
@@ -69,6 +82,7 @@ if /i "%exitQuestion%"=="Y" (
   goto exitHandler
 )
 
+:: Exit app Handler
 :exitHandler
 echo Goodbye my bro :^)
 timeout /t 3

@@ -1,63 +1,62 @@
-@echo off
-setlocal enabledelayedexpansion
+@ECHO off
+SETLOCAL enabledelayedexpansion
 
-rem ----/* Styles *\----
-color 0a
-title Fasty work space (v1.0.0)
+:: ----/* Styles *\----
+COLOR 0a
+TITLE Fasty work space (v1.0.0)
 
-rem echo Welcome message
-rem echo.
+:: ECHO Welcome message
+:: ECHO.
 
 :: ----/* Start Menue options *\----
 :menue
-cls
-cls
-echo +=========================================================================+
-echo ^|                               Main Menue                                ^|
-echo ^|-------------------------------------------------------------------------^|
-echo ^|                         [1] Make new Workspace.                         ^|
-echo ^|                         [2] Show Workspaces.                            ^|
-echo ^|                         [3] Remove.                                     ^|
-echo ^|                         ----------------------                          ^|
-echo ^|                         [4] GitHub Repository.                          ^|
-echo ^|                         [5] Exit.                                       ^|
-echo ^|                                                                         ^|
-echo +=========================================================================+
+CLS
+ECHO +=========================================================================+
+ECHO ^|                               Main Menue                                ^|
+ECHO ^|-------------------------------------------------------------------------^|
+ECHO ^|                         [1] Make new Workspace.                         ^|
+ECHO ^|                         [2] Show Workspaces.                            ^|
+ECHO ^|                         [3] Remove.                                     ^|
+ECHO ^|                         ----------------------                          ^|
+ECHO ^|                         [4] GitHub Repository.                          ^|
+ECHO ^|                         [5] Exit.                                       ^|
+ECHO ^|                                                                         ^|
+ECHO +=========================================================================+
 
 :: ----/* End Menue options *\----
 
-echo.
-set /p option=Please Enter Number Of List: 
-echo.
+ECHO.
+SET /p option=Please Enter Number Of List: 
+ECHO.
 
 :: ----/* Start Menue Conditions *\----
 
-if "%option%"=="1" goto newWorkspace
-if "%option%"=="2" goto showWorkspaces
-if "%option%"=="3" goto removeWorkspace
-if "%option%"=="4" goto gitHub
-if "%option%"=="5" goto closeApp
+IF "%option%"=="1" GOTO newWorkspace
+IF "%option%"=="2" GOTO showWorkspaces
+IF "%option%"=="3" GOTO removeWorkspace
+IF "%option%"=="4" GOTO gitHub
+IF "%option%"=="5" GOTO closeApp
 
 :: ----/* Start Menue Conditions *\----
 
 :: ----/* Start Error message *\----
 
-echo Your entered number is not defined! Please enter a number from the menu.
-echo press any key to get to the menue... 
-pause >nul
+ECHO Your entered number is not defined! Please enter a number from the menu.
+ECHO press any key to get to the menue... 
+PAUSE >NUL
 
-goto menue
+GOTO menue
 
 :: ----/* End Error message Menue *\----
 
 :: ----/*Start Set variables block*\----
-set /a count=0
-set "newWOrkspaceName="
+SET /a count=0
+SET "newWOrkspaceName="
 :: Pattern => name:path; 
-set "paths="
-set "existingPath="
+SET "paths="
+SET "existingPath="
 
-set "filePath=" 
+SET "filePath=" 
 
 :: ----/* End of Set variables block *\----
 
@@ -66,39 +65,40 @@ set "filePath="
 
 :: GitHub Handler
 :gitHub
-start "" "https://github.com/Mohammad-Khiabani/"
-echo Press any key to return to the menue...
-pause >nul
-timeout /t 1 >nul
-goto menue
+START "" "https://github.com/Mohammad-Khiabani/"
+ECHO Press any key to return to the menue...
+PAUSE >NUL
+TIMEOUT /t 1 >NUL
+GOTO menue
 
 :: Close app Handler
 :closeApp
-set /p exitQuestion=Do you want to exit? (Y = Yes, N = No): 
+SET /p exitQuestion=Do you want to exit? (Y = Yes, N = No): 
 
-if /i "%exitQuestion%"=="N" goto menue
+IF /i "%exitQuestion%"=="N" GOTO menue
 
-if /i "%exitQuestion%"=="Y" (
-  goto exitHandler
+IF /i "%exitQuestion%"=="Y" (
+  GOTO exitHandler
 )
 
-call :alarmBox "Attention" "Please enter a valid character!"
-goto closeApp
+CALL :alarmBox "Attention" "Please enter a valid character!"
+GOTO closeApp
 
+:: Function for showing stylized app messages
 :alarmBox
-echo.
-echo +------------^| %~1 ^|-------------+
-echo ^|                                      ^|
-echo ^| -[ %~2 ]- ^|
-echo ^|                                      ^|
-echo +--------------------------------------+
-echo.
-exit /b
+ECHO.
+ECHO +------------^| %~1 ^|-------------+
+ECHO ^|                                      ^|
+ECHO ^| -[ %~2 ]- ^|
+ECHO ^|                                      ^|
+ECHO +--------------------------------------+
+ECHO.
+EXIT /b
 
 :: Exit app Handler
 :exitHandler
-echo Goodbye my bro :^)
-timeout /t 3
-exit
+ECHO Goodbye my bro :^)
+TIMEOUT /t 3
+EXIT
 
-rem ----/* End Functions Section *\----
+:: ----/* End Functions Section *\----

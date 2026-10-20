@@ -88,6 +88,31 @@ SET /p "saveWorkspace=Do you want to add another app? (Y = Yes, N = No): "
 IF /i "%saveWorkspace%"=="Y" GOTO getFilePath
 EXIT /b
 
+:: Handler to check if the file path was already added
+:checkExistingPath
+cls
+SET "appPaths=!paths!"
+IF "!appPaths!"=="" SET "paths=%~1" & EXIT /b
+
+:loop
+  FOR /f "tokens=1,* delims=;" %%a IN ("!appPaths!") DO (
+    IF "%%a"=="%~1" (
+      ECHO.
+      ECHO - This file already exists! Please select another app.
+      ECHO.
+      PAUSE
+      CALL :getFilePath
+    ) 
+    IF NOT "%%b"=="" (
+      SET "appPaths=%%b"
+      GOTO loop
+    )
+    SET "paths=!paths!;%~1" 
+    EXIT /b
+  )
+  EXIT /b
+EXIT /b
+
 :: Function for creating new workspace
 :newWorkspace
 set "paths="

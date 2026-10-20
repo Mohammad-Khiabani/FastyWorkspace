@@ -15,10 +15,10 @@ ECHO +=========================================================================+
 ECHO ^|                               Main Menue                                ^|
 ECHO ^|-------------------------------------------------------------------------^|
 ECHO ^|                         [1] Make new Workspace.                         ^|
-ECHO ^|                         [2] Show Workspaces.                            ^|
-ECHO ^|                         [3] Remove.                                     ^|
 ECHO ^|                         ----------------------                          ^|
-ECHO ^|                         [4] GitHub Repository.                          ^|
+ECHO ^|                         [2] About.                                      ^|
+ECHO ^|                         [3] GitHub Repository.                          ^|
+ECHO ^|                         [4] Contact.                                    ^|
 ECHO ^|                         [5] Exit.                                       ^|
 ECHO ^|                                                                         ^|
 ECHO +=========================================================================+
@@ -32,9 +32,9 @@ ECHO.
 :: ----/* Start Menue Conditions *\----
 
 IF "%option%"=="1" GOTO newWorkspace
-IF "%option%"=="2" GOTO showWorkspaces
-IF "%option%"=="3" GOTO removeWorkspace
-IF "%option%"=="4" GOTO gitHub
+IF "%option%"=="2" GOTO about
+IF "%option%"=="3" GOTO gitHub
+IF "%option%"=="4" GOTO contact
 IF "%option%"=="5" GOTO closeApp
 
 :: ----/* Start Menue Conditions *\----

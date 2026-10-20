@@ -61,6 +61,25 @@ SET "filePath="
 
 :: ----/* Start Functions Section *\----
 
+:: Function for creating new workspace
+:newWorkspace
+set "paths="
+SETLOCAL
+
+SET /p "newWOrkspaceName= Please type the new work space name: "
+
+CLS
+
+ECHO - Great^^! Your workspace name is now set to '%newWorkspaceName%'.
+ECHO.
+
+ECHO - Select any key to add app path: 
+PAUSE >NUL
+CALL :getFilePath
+
+CALL :saveNewWorkspace "%newWOrkspaceName%"
+
+GOTO closeApp
 
 :: GitHub Handler
 :gitHub

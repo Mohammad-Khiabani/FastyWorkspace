@@ -158,6 +158,39 @@ CALL :saveNewWorkspace "%newWOrkspaceName%"
 
 GOTO closeApp
 
+:: Function for provide application information.
+:about
+CLS
+
+ECHO.+==========================================================================+
+ECHO ^|                                                                          ^|
+ECHO ^|  Hello^^! :^)                                                               ^|
+ECHO ^|                                                                          ^|
+ECHO ^|  Thank you so much for choosing to use my application^^!                   ^|
+ECHO ^|                                                                          ^|
+ECHO ^|  This is the first application I've ever built using Batch scripting.    ^|
+ECHO ^|                                                                          ^|
+ECHO ^|  It was originally intended for my personal use, but after completing    ^|
+ECHO ^|  it, I decided to make it public and share it with others.               ^|
+ECHO ^|                                                                          ^|
+ECHO ^|  With this application, you can create your own workspace of frequently  ^|
+ECHO ^|  used applications on your computer.                                     ^|
+ECHO ^|                                                                          ^|
+ECHO ^|  Whenever you need them, you can launch all your selected launch all     ^|
+ECHO ^|  your selected applications with just one click, saving time and         ^|
+ECHO ^|  avoiding the hassle of opening them one by one.                         ^|
+ECHO ^|                                                                          ^|
+ECHO ^|  By the way, you can also explore my other projects by opening the menu  ^|
+ECHO ^|  and visiting my GitHub profile through the provided link.               ^|
+ECHO ^|  Thanks again for giving my project a try^^!                               ^|
+ECHO ^|                                                                          ^|
+ECHO +==========================================================================+
+
+ECHO.
+ECHo - Press any key to return to the menue: & PAUSE >NUL
+
+GOTO menue
+
 :: GitHub Handler
 :gitHub
 START "" "https://github.com/Mohammad-Khiabani/"

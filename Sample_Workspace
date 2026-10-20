@@ -1,0 +1,14 @@
+ECHO This window will close automatically after all apps have been launched. Please do not close it before the process completes.
+:loop
+FOR /f "tokens=1,* delims=;" %%a IN ("!paths!") DO (
+	IF "%%b"=="" (
+		START %%a
+		ECHO End Loop
+		EXIT /b
+	)
+	START %%a
+	TIMEOUT /t 2 > NUL
+	set "paths=%%b"
+	CALL :loop
+	EXIT /b
+)

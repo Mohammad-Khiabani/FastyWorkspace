@@ -61,6 +61,33 @@ SET "filePath="
 
 :: ----/* Start Functions Section *\----
 
+::  Handler for getting the app path via the open file dialog
+:getFilePath
+SET "filePath=" 
+
+:: Open a file picker dialog via PowerShell and store the selected file path
+for /f "delims=" %%I in ('powershell -Command "Add-Type -AssemblyName System.Windows.Forms; $d = New-Object System.Windows.Forms.OpenFileDialog; if ($d.ShowDialog() -eq 'OK') { $d.FileName }"') do set "filePath=%%I"
+
+SET "leaveWorkspace="
+if NOT DEFINED filePath (
+  SET /p "leaveWorkspace= You didn't select any app. Do you want to leave without saving the workspace?  (Y = Yes, N = No): "
+  ECHO.
+  
+  IF /i "!leaveWorkspace!"=="Y" (
+    GOTO menue
+  ) ELSE (
+    CALL :getFilePath
+  )
+) ELSE (
+  CALL :checkExistingPath %filePath%
+)
+ECHO.
+ECHO - Your selected app added successfully.
+ECHo.
+SET /p "saveWorkspace=Do you want to add another app? (Y = Yes, N = No): "
+IF /i "%saveWorkspace%"=="Y" GOTO getFilePath
+EXIT /b
+
 :: Function for creating new workspace
 :newWorkspace
 set "paths="

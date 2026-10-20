@@ -34,7 +34,7 @@ ECHO.
 IF "%option%"=="1" GOTO newWorkspace
 IF "%option%"=="2" GOTO about
 IF "%option%"=="3" GOTO gitHub
-IF "%option%"=="4" GOTO contact
+IF "%option%"=="4" CLS & GOTO contact
 IF "%option%"=="5" GOTO closeApp
 
 :: ----/* Start Menue Conditions *\----
@@ -162,7 +162,7 @@ GOTO closeApp
 :about
 CLS
 
-ECHO.+==========================================================================+
+ECHO +==========================================================================+
 ECHO ^|                                                                          ^|
 ECHO ^|  Hello^^! :^)                                                               ^|
 ECHO ^|                                                                          ^|
@@ -190,6 +190,35 @@ ECHO.
 ECHo - Press any key to return to the menue: & PAUSE >NUL
 
 GOTO menue
+
+:: Function to contact the developer.
+:contact
+
+ECHO.
+ECHO +===============================^| Contact ^|===============================+
+ECHO ^|                                                                         ^|
+ECHO ^|                             [1] Instagram.                              ^|
+ECHO ^|                             [2] Telegram.                               ^|
+ECHO ^|                             [3] Twitter^(X^).                             ^|
+ECHO ^|                             ---------------                             ^|
+ECHO ^|                             [4] Main Menu.                              ^|
+ECHO ^|                                                                         ^|
+ECHO +=========================================================================+
+ECHO.
+
+:: Contact menu conditions
+SET /p contactItem=- Press a number from the menu above, then press Enter: 
+IF "%contactItem%"=="1" START "" "https://www.instagram.com/say.mhammad"
+IF "%contactItem%"=="2" START "" "https://t.me/mhamad_khy"
+IF "%contactItem%"=="3" START "" "https://x.com/khiabani_mh"
+IF "%contactItem%"=="4" GOTO menue
+
+CLS
+ECHO.
+ECHO - Please enter a valid number from the menu above.
+ECHO.
+TIMEOUT /t 2 >nul
+GOTO contact
 
 :: GitHub Handler
 :gitHub

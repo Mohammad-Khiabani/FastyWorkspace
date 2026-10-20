@@ -61,6 +61,31 @@ SET "filePath="
 
 :: ----/* Start Functions Section *\----
 
+:: Create a new workspace file and save the current settings into it
+:saveNewWorkspace
+for /f "delims=" %%I in ('powershell -Command "Add-Type -AssemblyName System.Windows.Forms; $d = New-Object System.Windows.Forms.FolderBrowserDialog; if ($d.ShowDialog() -eq 'OK') { $d.SelectedPath }"') do set "folderPath=%%I"
+if NOT DEFINED folderPath (
+  SET /p "leaveWorkspace= You didn't select any directory. Do you want to leave without saving the workspace?  (Y = Yes, N = No): "
+  ECHO.
+  
+  IF /i "!leaveWorkspace!"=="Y" (
+    GOTO menue
+  ) ELSE (
+    CALL :saveNewWorkspace
+  )
+) ELSE (
+  @REM  Make new workspace file.
+  >!folderPath!\%~1-FastyWorkspace.bat ECHO @ECHO OFF
+  >>!folderPath!\%~1-FastyWorkspace.bat ECHO SETLOCAL ENABLEDELAYEDEXPANSION
+  >>!folderPath!\%~1-FastyWorkspace.bat ECHO SET "paths=!paths!"
+  TYPE "Sample_Workspace" >> "!folderPath!\%~1-FastyWorkspace.bat"
+
+  ECHO.
+  ECHO - New workspace saved successfully at this path !folderPath! :^)
+  ECHO.
+)
+EXIT /b
+
 ::  Handler for getting the app path via the open file dialog
 :getFilePath
 SET "filePath=" 

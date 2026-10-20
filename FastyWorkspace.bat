@@ -8,11 +8,11 @@ TITLE Fasty work space (v1.0.0)
 :: ECHO Welcome message
 :: ECHO.
 
-:: ----/* Start Menue options *\----
-:menue
+:: ----/* Start Menu options *\----
+:menu
 CLS
 ECHO +=========================================================================+
-ECHO ^|                               Main Menue                                ^|
+ECHO ^|                               Main Menu                                 ^|
 ECHO ^|-------------------------------------------------------------------------^|
 ECHO ^|                         [1] Make new Workspace.                         ^|
 ECHO ^|                         ----------------------                          ^|
@@ -23,13 +23,13 @@ ECHO ^|                         [5] Exit.                                       
 ECHO ^|                                                                         ^|
 ECHO +=========================================================================+
 
-:: ----/* End Menue options *\----
+:: ----/* End Menu options *\----
 
 ECHO.
 SET /p "option= - Please Enter Number Of List: "
 ECHO.
 
-:: ----/* Start Menue Conditions *\----
+:: ----/* Start Menu Conditions *\----
 
 IF "%option%"=="1" GOTO newWorkspace
 IF "%option%"=="2" GOTO about
@@ -37,17 +37,17 @@ IF "%option%"=="3" GOTO gitHub
 IF "%option%"=="4" CLS & GOTO contact
 IF "%option%"=="5" GOTO closeApp
 
-:: ----/* Start Menue Conditions *\----
+:: ----/* Start Menu Conditions *\----
 
 :: ----/* Start Error message *\----
 
 ECHO - Your entered number is not defined! Please enter a number from the menu.
-ECHO - press any key to return to the menue... 
+ECHO - press any key to return to the menu... 
 PAUSE >NUL
 
-GOTO menue
+GOTO menu
 
-:: ----/* End Error message Menue *\----
+:: ----/* End Error message Menu *\----
 
 :: ----/*Start Set variables block*\----
 SET "newWOrkspaceName="
@@ -69,7 +69,7 @@ if NOT DEFINED folderPath (
   ECHO.
   
   IF /i "!leaveWorkspace!"=="Y" (
-    GOTO menue
+    GOTO menu
   ) ELSE (
     CALL :saveNewWorkspace
   )
@@ -99,7 +99,7 @@ if NOT DEFINED filePath (
   ECHO.
   
   IF /i "!leaveWorkspace!"=="Y" (
-    GOTO menue
+    GOTO menu
   ) ELSE (
     CALL :getFilePath
   )
@@ -187,9 +187,9 @@ ECHO ^|                                                                         
 ECHO +==========================================================================+
 
 ECHO.
-ECHo - Press any key to return to the menue: & PAUSE >NUL
+ECHo - Press any key to return to the menu: & PAUSE >NUL
 
-GOTO menue
+GOTO menu
 
 :: Function to contact the developer.
 :contact
@@ -211,7 +211,7 @@ SET /p contactItem=- Press a number from the menu above, then press Enter:
 IF "%contactItem%"=="1" START "" "https://www.instagram.com/say.mhammad"
 IF "%contactItem%"=="2" START "" "https://t.me/mhamad_khy"
 IF "%contactItem%"=="3" START "" "https://x.com/khiabani_mh"
-IF "%contactItem%"=="4" GOTO menue
+IF "%contactItem%"=="4" GOTO menu
 
 CLS
 ECHO.
@@ -223,16 +223,16 @@ GOTO contact
 :: GitHub Handler
 :gitHub
 START "" "https://github.com/Mohammad-Khiabani/"
-ECHO Press any key to return to the menue...
+ECHO Press any key to return to the menu...
 PAUSE >NUL
 TIMEOUT /t 1 >NUL
-GOTO menue
+GOTO menu
 
 :: Close app Handler
 :closeApp
 SET /p exitQuestion=Do you want to exit? (Y = Yes, N = No): 
 
-IF /i "%exitQuestion%"=="N" GOTO menue
+IF /i "%exitQuestion%"=="N" GOTO menu
 
 IF /i "%exitQuestion%"=="Y" (
   GOTO exitHandler

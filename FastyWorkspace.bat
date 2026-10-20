@@ -26,7 +26,7 @@ ECHO +=========================================================================+
 :: ----/* End Menue options *\----
 
 ECHO.
-SET /p option=Please Enter Number Of List: 
+SET /p "option= - Please Enter Number Of List: "
 ECHO.
 
 :: ----/* Start Menue Conditions *\----
@@ -41,8 +41,8 @@ IF "%option%"=="5" GOTO closeApp
 
 :: ----/* Start Error message *\----
 
-ECHO Your entered number is not defined! Please enter a number from the menu.
-ECHO press any key to get to the menue... 
+ECHO - Your entered number is not defined! Please enter a number from the menu.
+ECHO - press any key to return to the menue... 
 PAUSE >NUL
 
 GOTO menue
@@ -50,9 +50,8 @@ GOTO menue
 :: ----/* End Error message Menue *\----
 
 :: ----/*Start Set variables block*\----
-SET /a count=0
 SET "newWOrkspaceName="
-:: Pattern => name:path; 
+:: Pattern => name:path; /Remove
 SET "paths="
 SET "existingPath="
 

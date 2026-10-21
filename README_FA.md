@@ -6,15 +6,15 @@
 
 
 ## 📋 فهرست
-- [📖 مقدمه](#introduction)
-- [👨🏻‍💻 اسکریپت نویسی چیست؟](#what-is-scripting)
-- [🤔 batch script چیست؟](#what-is-batch-script)
-- [🧱 کاربردها](#use-cases)
-- [💬 توضیح پروژه](#project-description)
-- [▶️ نحوه اجرا](#how-to-run)
-  - [1️⃣ روش اول کلون کردن مخزن (Git Clone)](#git-clone)
-  - [2️⃣ روش دوم دانلود مستقیم (Download ZIP)](#download-zip)
-  - [🚀 اجرا](#run)
+- [مقدمه](#introduction)
+- [اسکریپت نویسی چیست؟](#what-is-scripting)
+- [batch script چیست؟](#what-is-batch-script)
+- [کاربردها](#use-cases)
+- [توضیح پروژه](#project-description)
+- [نحوه اجرا](#how-to-run)
+  - [روش اول کلون کردن مخزن (Git Clone)](#git-clone)
+  - [روش دوم دانلود مستقیم (Download ZIP)](#download-zip)
+  - [اجرا](#run)
 
 <hr>
 <div align="center">

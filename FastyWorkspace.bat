@@ -108,7 +108,7 @@ if NOT DEFINED filePath (
     CALL :getFilePath
   )
 ) ELSE (
-  CALL :checkExistingPath "%filePath%"
+  CALL :checkDuplicatingPath "%filePath%"
 )
 ECHO.
 ECHO - Your selected app added successfully.
@@ -118,7 +118,7 @@ IF /i "%saveWorkspace%"=="Y" GOTO getFilePath
 EXIT /b
 
 :: Handler to check if the file path was already added
-:checkExistingPath
+:checkDuplicatingPath
 cls
 SET "appPaths=!paths!"
 IF "!appPaths!"=="" SET "paths=%~1" & EXIT /b

@@ -6,18 +6,15 @@
 
 
 ## 📋 فهرست
-- [FASTY WORKSPACE](#fasty-workspace)
-  - [🌐 Languages](#-languages)
-  - [📋 فهرست](#-فهرست)
-  - [📖 مقدمه :](#-مقدمه-)
-  - [👨🏻‍💻 اسکریپت نویسی چیست؟](#-اسکریپت-نویسی-چیست)
-  - [🤔 batch script چیست؟](#-batch-script-چیست)
-  - [🧱 کاربردها](#-کاربردها)
-  - [💬 توضیح پروژه:](#-توضیح-پروژه)
-  - [▶️ نحوه اجرا:](#️-نحوه-اجرا)
-    - [1️⃣ روش اول: کلون کردن مخزن (Git Clone)](#1️⃣-روش-اول-کلون-کردن-مخزن-git-clone)
-    - [2️⃣ روش دوم: دانلود مستقیم (Download ZIP)](#2️⃣-روش-دوم-دانلود-مستقیم-download-zip)
-    - [🚀 اجرا](#-اجرا)
+- [📖 مقدمه](introduction)
+- [👨🏻‍💻 اسکریپت نویسی چیست؟](what-is-scripting)
+- [🤔 batch script چیست؟](what-is-batch-script)
+- [🧱 کاربردها](use-cases)
+- [💬 توضیح پروژه](project-description)
+- [▶️ نحوه اجرا](how-to-run)
+  - [1️⃣ روش اول کلون کردن مخزن (Git Clone)](git-clone)
+  - [2️⃣ روش دوم دانلود مستقیم (Download ZIP)](download-zip)
+  - [🚀 اجرا](run)
 
 <hr>
 <div align="center">

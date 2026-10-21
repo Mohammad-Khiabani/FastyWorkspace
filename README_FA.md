@@ -15,8 +15,10 @@
   - [روش اول کلون کردن مخزن (Git Clone)](#git-clone)
   - [روش دوم دانلود مستقیم (Download ZIP)](#download-zip)
   - [اجرا](#run)
+- [مشارکت](#contributing)
+- [لایسنس](#license)
 
-<hr>
+---
 <div align="center">
 <img width="689" height="261" alt="Image" src="https://github.com/user-attachments/assets/0d3644d9-6192-4b7e-8fec-20990b78b928" />
 <p>project demo</p>
@@ -95,3 +97,20 @@ FastyWorkspace یک ابزار تعاملیه که به کمکش می‌تونی
 1. وارد پوشه **FastyWorkspace** بشید.
 2. فایل **FastyWorkspace.bat** رو اجرا کنید.
 3. مراحل نمایش داده شده در منوی برنامه رو دنبال کنید تا **Workspace** خودتون رو بسازید.
+
+<a id="contributing"></a>
+
+## 🤝 مشارکت
+اگه ایده‌ای داری یا باگی دیدی، خیلی خوشحال می‌شم کمکم کنی.  
+Fork کن، یه branch جدید بساز و Pull Request بده ❤️
+
+<a id="license"></a>
+
+## 📄 لایسنس
+- این پروژه تحت لایسنس MIT منتشر شده است.
+
+---
+
+**⭐ تا اینجا اومدی یادت نره یه ستاره برام روشن کنی!**
+
+Created by [Mohammad Khiabani](https://github.com/Mohammad-Khiabani)

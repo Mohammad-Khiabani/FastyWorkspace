@@ -71,12 +71,18 @@ FastyWorkspace یک ابزار تعاملیه که به کمکش می‌تونی
 1. کلیدهای ترکیبی **Win + R** را فشار دهید.
 2. عبارت **cmd** رو وارد کرده و **Enter** بزنید.
 3. برای رفتن به دسکتاپ، دستور زیر رو اجرا کنید:
-`cd %USERPROFILE%\Desktop`
+
+   ```bat
+   cd %USERPROFILE%\Desktop
+   
 4. برای دریافت مخزن، دستور زیر رو اجرا کنید تا فرآیند کلون کردن آغاز بشه.:
-`git clone https://github.com/Mohammad-Khiabani/FastyWorkspace.git`
+
+   ```bash
+   git clone https://github.com/Mohammad-Khiabani/FastyWorkspace.git
+   ```
 5. با رفتن به دسکتاپ میتونید فولدر FastyWorkspace رو پیدا کنید.
 
-* پیش نیاز: برای استفاده از این روش، باید **Git** روی سیستم شما نصب باشد.
+> پیش نیاز: برای استفاده از این روش، باید **Git** روی سیستم شما نصب باشد.
 
 <a id="download-zip"></a>
 

@@ -63,6 +63,10 @@ SET "filePath="
 
 :: Create a new workspace file and save the current settings into it
 :saveNewWorkspace
+CLS
+ECHO - Select any key to save new Workspace: 
+PAUSE >NUL
+
 for /f "delims=" %%I in ('powershell -Command "Add-Type -AssemblyName System.Windows.Forms; $d = New-Object System.Windows.Forms.FolderBrowserDialog; if ($d.ShowDialog() -eq 'OK') { $d.SelectedPath }"') do set "folderPath=%%I"
 if NOT DEFINED folderPath (
   SET /p "leaveWorkspace= You didn't select any directory. Do you want to leave without saving the workspace?  (Y = Yes, N = No): "

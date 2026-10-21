@@ -6,15 +6,25 @@
 
 
 ## 📋 فهرست
-- [مقدمه](#introduction)
-- [اسکریپت نویسی چیست؟](#what-is-scripting)
-- [batch script چیست؟](#what-is-batch-script)
-- [کاربردها](#use-cases)
-- [توضیح پروژه](#project-description)
-- [نحوه اجرا](#how-to-run)
-- [روش اول کلون کردن مخزن (Git Clone)](#git-clone)
-  - [روش دوم دانلود مستقیم (Download ZIP) ](#download-zip)
-  - [اجرا](#run)
+- [FASTY WORKSPACE](#fasty-workspace)
+  - [🌐 Languages](#-languages)
+  - [📋 فهرست](#-فهرست)
+  - [مقدمه :](#مقدمه-)
+  - [اسکریپت نویسی چیست؟](#اسکریپت-نویسی-چیست)
+  - [batch script چیست؟](#batch-script-چیست)
+  - [کاربردها](#کاربردها)
+  - [توضیح پروژه:](#توضیح-پروژه)
+  - [نحوه اجرا:](#نحوه-اجرا)
+    - [روش اول: کلون کردن مخزن (Git Clone)](#روش-اول-کلون-کردن-مخزن-git-clone)
+    - [روش دوم: دانلود مستقیم (Download ZIP)](#روش-دوم-دانلود-مستقیم-download-zip)
+    - [اجرا](#اجرا)
+
+<hr>
+<div align="center">
+<img width="689" height="261" alt="Image" src="https://github.com/user-attachments/assets/0d3644d9-6192-4b7e-8fec-20990b78b928" />
+<p>project demo</p>
+</div>
+<hr>
 
 <a id="introduction"></a>
 
@@ -75,6 +85,11 @@ FastyWorkspace یک ابزار تعاملیه که به کمکش می‌تونی
 1. روی دکمه Code در صفحه ی ریپازیتوری بزنید
 2. در پنجره باز شده گزینه **Download ZIP** رو انتخاب کنید تا فرآیند دانلود آغاز بشه.
 3. با استفاده از یک نرم افزار فشرده سازی مثل **Winrar** یا **7Zip** فایل رو از حالت فشرده خارج کنید.
+
+<div align="center">
+  <img width="405" height="374" alt="Image" src="https://github.com/user-attachments/assets/79fd3c4d-5060-4efc-b206-c5426b29cf69" />
+<p>How to download</p>
+</div>
 
 <a id="run"></a>
 

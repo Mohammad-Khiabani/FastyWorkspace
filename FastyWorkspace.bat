@@ -108,7 +108,7 @@ if NOT DEFINED filePath (
     CALL :getFilePath
   )
 ) ELSE (
-  CALL :checkExistingPath %filePath%
+  CALL :checkExistingPath "%filePath%"
 )
 ECHO.
 ECHO - Your selected app added successfully.
